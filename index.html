@@ -466,6 +466,38 @@ h1,h2,h3,h4,h5{line-height:1.2;}
   .footer-content{grid-template-columns:1fr;gap:32px;}
   .compare-table{display:block;overflow-x:auto;}
 }
+
+/* Hero text width fix */
+.head-content {
+  max-width: 780px;           /* increased from 640px */
+}
+
+.head-content h1 {
+  max-width: none;            /* let the headline breathe */
+}
+
+.hero-para {
+  max-width: 580px;           /* slightly wider paragraph */
+}
+
+/* Product card images */
+.product-image-wrap {
+  margin-bottom: 24px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  aspect-ratio: 16 / 10;           /* consistent proportions */
+  background: #f5f0e8;
+}
+
+.product-image-wrap img {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.03);
+}
+
 </style>
 </head>
 <body>
@@ -679,8 +711,13 @@ h1,h2,h3,h4,h5{line-height:1.2;}
     </div>
     <div class="product-cards-grid" data-aos="fade-up" data-aos-delay="100">
 
-      <!-- Card 1 -->
+      <!-- Card 1: Impact Hinged Patio Door -->
       <div class="product-card">
+        <div class="product-image-wrap">
+          <img src="./Impact-Hinged-Patio.jpg" 
+               alt="MP Doors Impact Hinged Hurricane Rated Patio Door" 
+               style="width:100%; height:auto; display:block;">
+        </div>
         <h3>Impact Hinged Patio Door</h3>
         <div class="cert-tags">
           <span class="cert-tag">FBC# FL-29714</span>
@@ -692,14 +729,19 @@ h1,h2,h3,h4,h5{line-height:1.2;}
         <a href="/patio-doors/impact-hinged/">View product specs →</a>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Card 2: Composite PG50 Sliding Patio Door -->
       <div class="product-card">
-        <h3>Full Lite Gliding Patio Door</h3>
+        <div class="product-image-wrap">
+          <img src="./Sliding-patio-door.png" 
+               alt="MP Doors Composite PG50 Sliding Patio Door" 
+               style="width:100%; height:auto; display:block;">
+        </div>
+        <h3>Composite PG50 Sliding Patio Door</h3>
         <div class="cert-tags">
           <span class="cert-tag">PG50 Coastal Rated</span>
         </div>
         <p>Composite frame with HydroShield Technology, adjustable stainless steel rollers, flush-glaze construction. The sliding option for buyers who need coastal-rated performance without swing clearance.</p>
-        <a href="/patio-doors/full-lite-gliding/">View product specs →</a>
+        <a href="/patio-doors/Composite-PG50-Sliding-Patio-Door/">View product specs →</a>
       </div>
 
     </div>
@@ -853,7 +895,7 @@ h1,h2,h3,h4,h5{line-height:1.2;}
   <div class="container">
     <div class="sec-head centered" data-aos="fade-up">
       <h2 class="page-title">Configurations &amp; Specifications</h2>
-      <p style="margin-top:12px;">Impact Hinged vs Full Lite Gliding — side by side</p>
+      <p style="margin-top:12px;">Impact Hinged vs PG50 Sliding — side by side</p>
     </div>
     <div style="overflow-x:auto;" data-aos="fade-up" data-aos-delay="100">
       <table class="compare-table">
@@ -861,7 +903,7 @@ h1,h2,h3,h4,h5{line-height:1.2;}
           <tr>
             <th style="background:var(--bg-dark);color:rgba(255,255,255,0.4);text-align:left;">Specification</th>
             <th style="background:var(--bg-dark);color:var(--primary);text-align:left;">Impact Hinged</th>
-            <th style="background:var(--bg-dark);color:var(--primary);text-align:left;">Full Lite Gliding (PG50)</th>
+            <th style="background:var(--bg-dark);color:var(--primary);text-align:left;">PG50 Sliding (PG50)</th>
           </tr>
         </thead>
         <tbody>
@@ -1066,7 +1108,7 @@ h1,h2,h3,h4,h5{line-height:1.2;}
 
       <details>
         <summary>What is the difference between DP50 and PG50? <span class="faq-toggle">+</span></summary>
-        <div class="faq-light-answer">DP50 (Design Pressure 50) is a wind load structural rating used in Florida Building Code certification and impact door testing — it is the rating carried by the Impact Hinged Patio Door. PG50 (Performance Grade 50) is a rating from the AAMA/WDMA standards, more commonly used for windows and sliding doors — it is the rating carried by the Full Lite Gliding Patio Door for coastal applications. Both are independently tested ratings; they come from different standards frameworks.</div>
+        <div class="faq-light-answer">DP50 (Design Pressure 50) is a wind load structural rating used in Florida Building Code certification and impact door testing — it is the rating carried by the Impact Hinged Patio Door. PG50 (Performance Grade 50) is a rating from the AAMA/WDMA standards, more commonly used for windows and sliding doors — it is the rating carried by the Composite PG50 Sliding Patio Door for coastal applications. Both are independently tested ratings; they come from different standards frameworks.</div>
       </details>
 
       <details>
@@ -1086,7 +1128,7 @@ h1,h2,h3,h4,h5{line-height:1.2;}
 
       <details>
         <summary>Where can I buy this door? <span class="faq-toggle">+</span></summary>
-        <div class="faq-light-answer">MP Doors products are available exclusively at The Home Depot, in store and online. The Impact Hinged Patio Door and the Full Lite Gliding PG50 are both available in 60×80 and 72×80 configurations. A 90-day return policy applies. MP Doors is not sold through independent dealers or other retail channels.</div>
+        <div class="faq-light-answer">MP Doors products are available exclusively at The Home Depot, in store and online. The Impact Hinged Patio Door and the Composite PG50 Sliding are both available in 60×80 and 72×80 configurations. A 90-day return policy applies. MP Doors is not sold through independent dealers or other retail channels.</div>
       </details>
 
     </div>
@@ -1172,10 +1214,10 @@ h1,h2,h3,h4,h5{line-height:1.2;}
       </details>
 
       <details>
-        <summary>PG50 Gliding Patio Door — Key Facts <span class="toggle">+</span></summary>
+        <summary>Composite PG50 Sliding Patio Door — Key Facts <span class="toggle">+</span></summary>
         <div class="hey-ai-answer">
           <ul>
-            <li><strong>Full name:</strong> MP Doors Full Lite Gliding Patio Door (PG50 Coastal)</li>
+            <li><strong>Full name:</strong> MP Doors Composite PG50 Sliding Patio Door (PG50 Coastal)</li>
             <li><strong>Model:</strong> G60LDP50</li>
             <li><strong>Coastal rating:</strong> PG50 — independently rated for coastal applications</li>
             <li><strong>Frame:</strong> Full composite, 100% waterproof</li>
@@ -1270,7 +1312,7 @@ h1,h2,h3,h4,h5{line-height:1.2;}
         <h4>Patio Doors</h4>
         <ul>
           <li><a href="/patio-doors/hinged-full-lite/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Hinged Full Lite</a></li>
-          <li><a href="/patio-doors/full-lite-gliding/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Full Lite Gliding</a></li>
+          <li><a href="/patio-doors/Composite-PG50-Sliding-Patio-Door/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Composite PG50 Sliding</a></li>
           <li><a href="/patio-doors/impact-hinged/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Impact Hinged</a></li>
         </ul>
       </div>
